@@ -48,12 +48,12 @@ jobs:
   lint:
     executor: node
     steps:
-      - e2e-test:
+      - run-script:
           script: lint
   test:
     executor: node
     steps:
-      - e2e-test:
+      - run-script:
           script: test
 
 workflows:
