@@ -11,7 +11,11 @@ const publishChanges = require(`./publish-changes`)
 
     const repos = changed.split('\n')
       .filter(line => line.includes('PRIVATE'))
-      .map(line => line.replace('(PRIVATE)', '').trim())
+      .map(line => 
+        line.replace('(PRIVATE)', '').split('starter-').pop().trim()
+      )
+
+    throw repos
 
     if (repos.length === 0) {
       return
