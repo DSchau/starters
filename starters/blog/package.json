@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "@gatsbyjs/starter-blog",
   "private": true,
   "description": "A blog starter for GatsbyJS",
   "version": "0.0.2",

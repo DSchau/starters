@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "@gatsbyjs/starter-hello-world",
   "private": true,
   "description": "Gatsby hello world starter",
   "version": "0.0.2",

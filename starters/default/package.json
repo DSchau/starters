@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "@gatsbyjs/starter-default",
   "private": true,
   "description": "Gatsby default starter",
   "version": "0.0.2",
