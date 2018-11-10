@@ -9,7 +9,7 @@ module.exports = async function publishChanges(name) {
   const commitMessage = `chore: syncing with gatsbyjs/starters monorepo`
 
   const commands = [
-    `cd packages/${name}`,
+    `cd starters/${name}`,
     `git init`,
     `git remote add origin ${origin}`,
     `git fetch origin/master`,
