@@ -72,8 +72,8 @@ jobs:
             - d8:84:8c:06:ad:51:3f:3e:37:8c:b2:65:bf:24:29:40
       - run: git config --global user.name "GatsbyJS Bot"
       - run: git config --global user.email "admin@gatsbyjs.com"
-      - run: yarn run publish
       - run: node scripts/sync-repos.js
+      - run: yarn run publish
 
 workflows:
   version: 2
