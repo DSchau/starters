@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const spawn = require(`./spawn`)
 
-const setupGitUser = require(`./setup-git-user`)
 const publishChanges = require(`./push-repo-changes`)
 
 const CHANGED_PACKAGE_EXPR = /^(.+)\(PRIVATE\)/m
@@ -18,8 +17,6 @@ const CHANGED_PACKAGE_EXPR = /^(.+)\(PRIVATE\)/m
     if (repos.length === 0) {
       return
     }
-
-    await setupGitUser()
 
     await Promise.all(repos.map(repo => publishChanges(repo)))
   } catch (e) {
