@@ -1,18 +1,17 @@
 #!/usr/bin/env node
-const spawn = require(`./spawn`)
+const execa = require(`execa`)
 
 const publishChanges = require(`./publish-changes`)
 
-const CHANGED_PACKAGE_EXPR = /^(.+)\(PRIVATE\)/m
 ;(async function syncRepos() {
   try {
-    const changed = await spawn(`npm run changed`)
+    const changed = await execa(`npm`, [`run`, `changed`])
       .then(({ stdout }) => stdout)
       .catch(e => process.exit(0)) // nothing changed!
 
-    const repos = (changed.match(CHANGED_PACKAGE_EXPR) || []).map(repo =>
-      repo.trim()
-    )
+    const repos = changed.split('\n')
+      .filter(line => line.includes('PRIVATE'))
+      .map(line => line.replace(/\(PRIVATE\)/, '').trim())
 
     if (repos.length === 0) {
       return
