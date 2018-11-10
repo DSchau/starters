@@ -67,6 +67,7 @@ jobs:
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
+      - run: node scripts/setup-git-user-script.js
       - run: yarn run publish
       - run: node scripts/sync-repos.js
 
