@@ -15,8 +15,6 @@ const publishChanges = require(`./publish-changes`)
         line.replace('(PRIVATE)', '').split('starter-').pop().trim()
       )
 
-    throw repos
-
     if (repos.length === 0) {
       return
     }
