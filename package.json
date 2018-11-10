@@ -1,27 +1,36 @@
 {
   "name": "@gatsbyjs/starters",
   "version": "1.0.0",
-  "main": "n/a",
   "private": true,
-  "author": "Kyle Matthews <kyle@gatsbyjs.com>",
-  "contributors": [
-    "Dustin Schau <dustin@gatsbyjs.com>"
-  ],
-  "license": "MIT",
+  "main": "n/a",
+  "author": "Dustin Schau <dustin@gatsbyjs.com> (https://dustinschau.com)",
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/starters"
   },
   "devDependencies": {
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "execa": "^1.0.0",
     "lerna": "^3.4.3"
   },
   "scripts": {
     "changed": "lerna changed --all",
-    "lint": "lerna run lint",
-    "publish": "lerna version",
+    "build": "lerna run build",
+    "lint": "eslint \"starters/**/src/**/*.{js,jsx}\"",
+    "publish": "lerna version patch",
     "test": "lerna run test"
   },
+  "engines": {
+    "yarn": ">=1.2.0",
+    "node": ">=9.0.0"
+  },
   "workspaces": [
-    "packages/*"
+    "starters/*"
   ]
 }

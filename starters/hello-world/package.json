@@ -8,9 +8,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "lint": "echo \"Add eslint!\"",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! They're great\""
+    "test": "echo \"Write tests! -> https://gatsby.app/testing\""
   },
   "dependencies": {
     "gatsby": "^2.0.33",
