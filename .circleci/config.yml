@@ -71,7 +71,7 @@ jobs:
           fingerprints:
             - 02:dd:9e:d2:26:04:d2:5c:d5:8e:db:a7:96:9a:25:a5
       - run: git config --global user.name "GatsbyJS Bot"
-      - run: git config -- global user.email "admin@gatsbyjs.com"
+      - run: git config --global user.email "admin@gatsbyjs.com"
       - run: yarn run publish
       - run: node scripts/sync-repos.js
 
