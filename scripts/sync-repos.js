@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const execa = require(`execa`)
 
-const publishChanges = require(`./publish-changes`)
-
 ;(async function syncRepos() {
   try {
     const changed = await execa(`npm`, [`run`, `changed`])
@@ -19,7 +17,7 @@ const publishChanges = require(`./publish-changes`)
       return
     }
 
-    await Promise.all(repos.map(repo => execa(`./scripts/publish-changes.sh ${repo}`)))
+    await Promise.all(repos.map(repo => execa(`./publish-changes.sh ${repo}`)))
   } catch (e) {
     console.error(e)
     process.exit(1)
