@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const spawn = require(`./spawn`)
 
-const publishChanges = require(`./push-repo-changes`)
+const publishChanges = require(`./publish-changes`)
 
 const CHANGED_PACKAGE_EXPR = /^(.+)\(PRIVATE\)/m
 ;(async function syncRepos() {
