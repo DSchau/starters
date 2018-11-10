@@ -2,10 +2,10 @@ const execa = require(`execa`)
 const spawn = require(`./spawn`)
 
 module.exports = async function publishChanges(name) {
-  if (!process.env.GITHUB_TOKEN) {
-    throw new Error(`An environment variable containing GITHUB_TOKEN is required`)
+  if (!process.env.GH_TOKEN) {
+    throw new Error(`An environment variable containing GH_TOKEN is required`)
   }
-  const origin = `https://${process.env.GITHUB_TOKEN}@github.com/dschau/gatsby-starter-${name}.git`
+  const origin = `https://${process.env.GH_TOKEN}@github.com/dschau/gatsby-starter-${name}.git`
   const commitMessage = `chore: syncing with gatsbyjs/starters monorepo`
 
   const commands = [
