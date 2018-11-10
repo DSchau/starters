@@ -16,6 +16,7 @@
     "lerna": "^3.4.3"
   },
   "scripts": {
+    "changed": "lerna changed",
     "lint": "lerna run lint",
     "publish": "lerna version",
     "test": "lerna run test"
