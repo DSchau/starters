@@ -23,7 +23,7 @@
     "changed": "lerna changed --all",
     "build": "lerna run build",
     "lint": "eslint \"starters/**/src/**/*.{js,jsx}\"",
-    "publish": "lerna version patch",
+    "publish": "lerna version patch --yes",
     "test": "lerna run test"
   },
   "engines": {
