@@ -17,6 +17,7 @@
   },
   "scripts": {
     "lint": "lerna run lint",
+    "publish": "lerna publish --skip-npm",
     "test": "lerna run test"
   },
   "workspaces": [
