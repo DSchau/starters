@@ -8,12 +8,11 @@ module.exports = async function publishChanges(name) {
     throw new Error(`An environment variable containing GH_TOKEN is required`)
   }
   const origin = `https://${process.env.GH_TOKEN}@github.com/dschau/gatsby-starter-${name}.git`
-  const base = process.env.CIRCLE_WORKING_DIRECTORY || path.resolve()
+  const base = path.join(process.env.CIRCLE_WORKING_DIRECTORY || path.resolve(), `starters`, name)
   const commitMessage = `chore: syncing with gatsbyjs/starters monorepo`
 
   const commands = [
     `cd ${base}`,
-    `cd starters/${name}`,
     `git init`,
     `git remote add origin ${origin}`,
     `git fetch origin/master`,
