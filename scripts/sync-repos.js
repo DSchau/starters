@@ -1,23 +1,12 @@
 #!/usr/bin/env node
-const execa = require(`execa`)
-const spawn = require(`./spawn`)
+const fs = require(`fs-extra`)
+const path = require(`path`)
 
 ;(async function syncRepos() {
   try {
-    const output = await execa(`npm`, [`run`, `changed`])
-      .then(({ stdout }) => stdout)
-      .catch(() => process.exit(0)) // nothing changed!
-
-    const repos = output.split('\n')
-      .filter(line => line.includes('PRIVATE'))
-      .map(line => 
-        line.replace('(PRIVATE)', '').split('starter-').pop().trim()
-      )
-
-    if (repos.length === 0) {
-      console.log(`Zero changes detected to starters; skipping publish`)
-      return
-    }
+    const starters = path.join(process.cwd(), 'starters')
+    const repos = await fs.readdir(starters)
+      .then(dirs => dirs.filter(dir => fs.statSync(path.join(starters, dir)).isDirectory()))
 
     await Promise.all(repos.map(repo => spawn(`sh ./scripts/publish-changes.sh ${repo}`)))
   } catch (e) {
