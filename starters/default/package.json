@@ -1,7 +1,7 @@
 {
   "name": "@gatsbyjs/starter-default",
   "private": true,
-  "description": "Gatsby default starter",
+  "description": "The default starter for Gatsby",
   "version": "0.0.6",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
