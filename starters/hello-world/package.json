@@ -1,7 +1,7 @@
 {
   "name": "@gatsbyjs/starter-hello-world",
   "private": true,
-  "description": "Gatsby hello world starter",
+  "description": "A simplified hello world starter for Gatsby",
   "version": "0.0.7",
   "license": "MIT",
   "scripts": {
