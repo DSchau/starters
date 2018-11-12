@@ -1,8 +1,8 @@
 {
+  "version": "0.0.8",
   "packages": [
     "starters/*"
   ],
-  "version": "independent",
   "npmClient": "yarn",
   "registry": "https://registry.npmjs.org/",
   "useWorkspaces": true
