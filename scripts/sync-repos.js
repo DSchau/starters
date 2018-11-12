@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const execa = require(`execa`)
+const spawn = require(`./spawn`)
 
 ;(async function syncRepos() {
   try {
@@ -18,7 +19,7 @@ const execa = require(`execa`)
       return
     }
 
-    await Promise.all(repos.map(repo => execa(`sh`, ['./scripts/publish-changes.sh', repo])))
+    await Promise.all(repos.map(repo => spawn(`sh ./scripts/publish-changes.sh ${repo}`)))
   } catch (e) {
     console.error(e)
     process.exit(1)
