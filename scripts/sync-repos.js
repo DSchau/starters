@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 const execa = require(`execa`)
-const path = require(`path`)
 
 ;(async function syncRepos() {
   try {
     const changed = await execa(`npm`, [`run`, `changed`])
       .then(({ stdout }) => stdout)
-      .catch(e => process.exit(0)) // nothing changed!
+      .catch(() => process.exit(0)) // nothing changed!
 
     const repos = changed.split('\n')
       .filter(line => line.includes('PRIVATE'))
