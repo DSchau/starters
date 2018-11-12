@@ -67,6 +67,7 @@ jobs:
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
+      - run: yarn run markdown # this keeps the READMEs up to date
       - add_ssh_keys:
           fingerprints:
             - d8:84:8c:06:ad:51:3f:3e:37:8c:b2:65:bf:24:29:40

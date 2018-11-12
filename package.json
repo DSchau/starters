@@ -18,12 +18,15 @@
     "eslint-plugin-react": "^7.0.0",
     "execa": "^1.0.0",
     "fs-extra": "^7.0.1",
-    "lerna": "^3.4.3"
+    "lerna": "^3.4.3",
+    "lodash": "^4.17.11",
+    "markdown-magic": "^0.1.25"
   },
   "scripts": {
     "changed": "lerna changed --all",
     "build": "lerna run build",
     "lint": "eslint \"starters/**/src/**/*.{js,jsx}\"",
+    "markdown": "md-magic --path \"starters/**/*.md\"",
     "publish": "lerna version patch --yes",
     "test": "lerna run test"
   },
