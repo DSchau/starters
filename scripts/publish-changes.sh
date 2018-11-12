@@ -2,8 +2,6 @@
 FOLDER=$1
 WORKING_DIR="${CIRCLE_WORKING_DIRECTORY:-.}"
 
-echo $WORKING_DIR
-
 cd $WORKING_DIR/starters/$FOLDER
 git init
 git remote add origin https://$GH_TOKEN@github.com/dschau/gatsby-starter-$FOLDER.git
