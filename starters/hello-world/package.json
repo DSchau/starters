@@ -2,7 +2,7 @@
   "name": "@gatsbyjs/starter-hello-world",
   "private": true,
   "description": "Gatsby hello world starter",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
