@@ -2,7 +2,7 @@
   "name": "@gatsbyjs/starter-blog",
   "private": true,
   "description": "A blog starter for GatsbyJS",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Kyle Mathews <kyle@gatsbyjs.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
