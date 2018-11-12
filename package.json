@@ -26,7 +26,7 @@
     "changed": "lerna changed --all",
     "build": "lerna run build",
     "lint": "eslint \"starters/**/src/**/*.{js,jsx}\"",
-    "markdown": "md-magic --path \"starters/**/*.md\"",
+    "markdown": "md-magic --path \"starters/**/*.md\" --path README.md",
     "publish": "lerna version patch --yes",
     "test": "lerna run test"
   },
