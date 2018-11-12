@@ -15,6 +15,7 @@ const path = require(`path`)
       )
 
     if (repos.length === 0) {
+      console.log(`Zero changes detected to starters; skipping publish`)
       return
     }
 
