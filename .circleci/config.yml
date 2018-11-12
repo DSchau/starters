@@ -83,10 +83,11 @@ workflows:
       - lint
       - test
       - build
-      - publish:
           requires:
             - lint
             - test
+      - publish:
+          requires:
             - build
           filters:
             branches:
