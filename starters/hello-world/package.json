@@ -15,5 +15,12 @@
     "gatsby": "^2.0.33",
     "react": "^16.5.1",
     "react-dom": "^16.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/starters/issues"
   }
 }
